@@ -212,7 +212,9 @@ let name = artists.name;
 console.log(artists[0])
 
 
+let bio = artists['bio'];
 
+console.log(artists[3]);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
@@ -239,17 +241,18 @@ function getArtistByIndex(array, index) {
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array, min, max){
-    const twenties = [];
-    for (let i = 0; i < array.length; i++){
-      const yearsAlive = Number(array[i]['years'].slice(0, 8));
-    }
-  if(yearsAlive > min && yearsAlive < max){
-    twenties.push(array[i])
+function get20s(array, min, max) {
+
+  const yearsAlive = [];
+  for (let i=0; i < array.length; i++){
+  const twenties = Number(array[i]['years'].slice(0, 8))
+  if (twenties > min && twenties < max) {
+    yearsAlive.push(array[i].name);
   }
-    return twenties;
-  }
-  console.log(get20s(artists, 1900, 2000));
+}
+return yearsAlive;
+}
+ console.log(get20s(artists, 1900, 2000));
 
 
 
@@ -308,10 +311,10 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(artists){
+function lotsOfArt(array){
   const moreThan100 = [];
   for (let i =0; i < array.length; i++)
-  if (paintings > 99) {
+  if (artists.paintings > 99) {
     moreThan100.push(array[i].name);
   }
   return moreThan100;
