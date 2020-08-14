@@ -314,7 +314,7 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(array){
   const moreThan100 = [];
   for (let i =0; i < array.length; i++)
-  if (artists.paintings > 99) {
+  if (paintings > 99) {
     moreThan100.push(array[i].name);
   }
   return moreThan100;
