@@ -245,7 +245,7 @@ function get20s(array, min, max) {
 
   const yearsAlive = [];
   for (let i=0; i < array.length; i++){
-  const twenties = Number(array[i]['years'].slice(0, 8))
+  const twenties = Number(array[i]['years'].slice(0, 5))
   if (twenties > min && twenties < max) {
     yearsAlive.push(array[i].name);
   }
@@ -311,16 +311,16 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(array){
+function lotsOfArt(array) {
   const moreThan100 = [];
   for (let i =0; i < array.length; i++)
-  if (paintings > 99) {
+  if (artists.paintings > 99) {
     moreThan100.push(array[i].name);
   }
   return moreThan100;
 }
 
-console.log(lotsofArt(artists));
+console.log(lotsOfArt(artists));
 
 
 
